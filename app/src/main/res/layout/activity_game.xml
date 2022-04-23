@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/tiles" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aladin"
+            android:text="Tile Game"
+            android:textSize="34sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bu9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45pt"
+                    android:layout_weight="1"
+                    android:onClick="buClick"
+                    android:textColor="@color/black"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/bu10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#1BF840"
+                    android:text="Exit"
+                    android:textColor="#0B0101"
+                    android:textStyle="bold"
+                    app:cornerRadius="100dp" />
+
+                <Button
+                    android:id="@+id/bu11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#1BF840"
+                    android:text="Retry"
+                    android:textColor="#0B0101"
+                    android:textStyle="bold"
+                    app:cornerRadius="100dp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
