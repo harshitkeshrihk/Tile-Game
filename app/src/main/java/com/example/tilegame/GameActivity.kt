@@ -1,5 +1,6 @@
 package com.example.tilegame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +18,10 @@ class GameActivity : AppCompatActivity() {
             playAgain()
         }
         bu10.setOnClickListener{
-            finish()
+//            finish()
+            val intent = Intent(this,StartActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
 
     }
@@ -26,6 +30,7 @@ class GameActivity : AppCompatActivity() {
     var numbers = mutableListOf<Int>()
     var a: Int = 0
     var score: Int = 0
+    var flag = 0
 
     fun buClick(view: View){           //called by every buttons which are clicked and give it a unique number from 1 to 9 i.e from number List and make sure not present in numbers.
 
@@ -112,20 +117,24 @@ class GameActivity : AppCompatActivity() {
 
     fun playTileGame(cellId: Int,btnSelected: Button){
 
+
         btnSelected.text = cellId.toString()
         if(cellId == 7 && score<3){
             btnSelected.setBackgroundResource(R.drawable.win)
             btnSelected.isEnabled = false
             // show alert to win and play again
             showWinAlertDialog()
+            flag = 1
 
         }else {
             btnSelected.setBackgroundResource(R.drawable.lose)
             btnSelected.isEnabled = false
             score++
+
             if (score == 3) {
                 //show Alert to lose and retry
                 showLoseAlertDialog()
+                flag = 1
             }
         }
     }
@@ -186,12 +195,17 @@ class GameActivity : AppCompatActivity() {
         val winDialog = AlertDialog.Builder(this)
             .setTitle("WIN")
             .setMessage("You have found 7 in three or less than three attempts.")
+            .setCancelable(false)
             .setIcon(R.drawable.ic_win_foreground)
             .setPositiveButton("Play Again"){ _,_ ->
                 playAgain()
             }
             .setNegativeButton("Exit"){ _,_ ->
-                finish()
+//                finish()
+                val intent = Intent(this,StartActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+
             }.create()
         winDialog.show()
     }
@@ -199,6 +213,7 @@ class GameActivity : AppCompatActivity() {
         val winDialog = AlertDialog.Builder(this)
             .setTitle("LOSE")
             .setMessage("Better luck next time!!")
+            .setCancelable(false)
             .setIcon(R.drawable.ic_lose_foreground)
             .setPositiveButton("Retry"){ _,_ ->
                 playAgain()
